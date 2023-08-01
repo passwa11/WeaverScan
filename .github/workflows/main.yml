@@ -18,7 +18,7 @@ jobs:
     - name: linux Build
       run: |
         go mod tidy
-        go build -o WeaverScan -v kscan.go
+        go build -o WeaverScan -v main.go
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
@@ -42,7 +42,7 @@ jobs:
     - name: mac Build
       run: |
         go mod tidy
-        go build -o WeaverScan_darwin -v kscan.go
+        go build -o WeaverScan_darwin -v main.go
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
@@ -66,7 +66,7 @@ jobs:
     - name: Windows Build
       run: |
         go mod tidy
-        go build -o WeaverScan.exe -v kscan.go
+        go build -o WeaverScan.exe -v main.go
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
